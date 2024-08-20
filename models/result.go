@@ -7,7 +7,7 @@ import (
 	"net"
 	"time"
 
-	log "github.com/gophish/gophish/logger"
+	log "gophish/logger"
 	"github.com/jinzhu/gorm"
 	"github.com/oschwald/maxminddb-golang"
 )

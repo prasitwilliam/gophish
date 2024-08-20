@@ -5,6 +5,7 @@ import (
 	"log"
 
 	"github.com/jinzhu/gorm"
+	_ "github.com/jinzhu/gorm/dialects/mysql" 
 )
 
 // Tenant models hold the attributes for a tenant
@@ -61,6 +62,7 @@ func GetTenant(id int64) (Tenant, error) {
 func GetTenantByIdentifier(identifier string) (Tenant, error) {
 	tenant := Tenant{}
 	err := db.Where("tenant_identifier=?", identifier).First(&tenant).Error
+	log.Println(err, "hhhhh")
 	if err != nil {
 		log.Println("Error getting tenant by identifier:", err)
 		return tenant, err

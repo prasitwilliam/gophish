@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/gophish/gophish/logger"
+	"gophish/logger"
 	"github.com/gorilla/mux"
 	"gophish/models"
+	"github.com/jinzhu/gorm"
 )
 
 // Tenants handles the functionality for the /api/tenants endpointapi_key=d42ceb1d38b7f95ed4fabbb357b054c8c1f4cc42849
